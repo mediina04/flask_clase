@@ -1,0 +1,67 @@
+img{
+    max-width: 50px;
+    height: 50px
+}
+
+/* Formulario */
+.formulario {
+    background-color: #f8f9fa; /* Color de fons clar */
+    border-radius: 8px; /* Arrodonir les cantonades */
+    padding: 20px; /* Afegir espai intern */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombra suau per al formulari */
+    max-width: 400px; /* Ample màxim del formulari */
+    margin: 20px auto; /* Centrar el formulari horitzontalment i afegir espai superior i inferior */
+}
+
+.formulario h1 {
+    text-align: center; /* Centrar el títol */
+    font-size: 24px; /* Mida de la lletra del títol */
+    color: #343a40; /* Color de text */
+    margin-bottom: 15px; /* Espai entre el títol i el formulari */
+}
+
+.formulario .form-group {
+    margin-bottom: 15px; /* Espai entre els camps del formulari */
+}
+
+.formulario label {
+    font-weight: bold; /* Fer els labels més destacats */
+    color: #495057; /* Color del text del label */
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"],
+.formulario input[type="submit"] {
+    width: 100%; /* Fer que els inputs ocupin tot l'ample */
+    padding: 10px; /* Afegir espai intern als inputs */
+    border-radius: 5px; /* Arrodonir les cantonades dels inputs */
+    border: 1px solid #ced4da; /* Bordes clares per als inputs */
+    box-sizing: border-box; /* Incloure el padding en el càlcul de l'ample */
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="password"]:focus {
+    border-color: #80bdff; /* Canviar el color del bord quan l'input estigui seleccionat */
+    outline: none; /* Treure el contorn per evitar l'efecte per defecte */
+}
+
+.formulario input[type="submit"] {
+    background-color: #007bff; /* Color de fons blau */
+    color: white; /* Color de text blanc per al botó */
+    border: none; /* Sense bord per al botó */
+    cursor: pointer; /* Canviar el cursor quan passa per sobre */
+    font-size: 16px; /* Mida de la lletra del botó */
+    padding: 10px 20px; /* Espai intern per al botó */
+    margin-top: 10px; /* Espai superior per separar el botó dels inputs */
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #0056b3; /* Canviar el color de fons quan el botó es passa per sobre */
+}
+
+.formulario .flash-message {
+    color: red; /* Color per als missatges d'error */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}

@@ -1,0 +1,29 @@
+<!-- <nav>
+    <ul>
+        <img src="{{url_for('static',filename='images/parking1.png')}}">
+        <li><a href="{{ url_for('index') }}">Botó inici </a></li>
+        <li> <a href="https://www.google.com">Botó Google</a></li>
+    </ul>
+</nav> -->
+
+<nav class=" navbar navbar-expand-md navbar-light bg-light d-flex justify-content-start" ">
+    <a class="ms-0 navbar-brand" href="#">
+      <!-- ICONA -->
+        <img src="{{ url_for('static', filename='images/parking1.png') }}" alt="imatge_parking" style="height: 50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <!-- BOTO INICI -->
+          <a class="nav-link" href="{{ url_for('index') }}">Botó inici <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <!-- BOTO GOOGLE -->
+          <a class="nav-link" href="https://www.google.com" TARGET="_blank">Botó Google</a>
+        </li>
+      
+  </nav>

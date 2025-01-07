@@ -1,0 +1,49 @@
+<!-- #per executar-la:
+# python main.py
+#Per executar-la i tenir el debug a la pantalla:
+#flask --app main.py run --host=0.0.0.0 --port=81 --debug -->
+
+
+
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block title %} 
+    {{super()}}
+    welcome to flask
+{% endblock %}
+
+
+{% block content %}
+    <h1>Benvingut a la app de Flask</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eligendi neque voluptates officia magnam, laborum soluta exercitationem, accusantium iure quidem nemo assumenda optio quae vero, perferendis praesentium iste rem deleniti.</p>
+
+
+    {% if username %}
+        <h1>Benvingut usuari {{ username }} </h1>
+
+    {%  endif %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-5 mx-auto formulario">
+                {{wtf.quick_form(login_form)}}
+            </div>
+        </div>
+    </div>
+     
+
+<!-- {% if ip%}
+<h2>La ip de l'usuari és: {{ip}} </h2>
+
+{% else %}
+<a href="{{url_for('index') }}">Crear cookie</a>
+{% endif %}
+
+<ul>
+    {% for item in  items %}
+    {{macros.render_items(item)}}
+    {%endfor%}
+</ul> -->
+{% endblock%}
