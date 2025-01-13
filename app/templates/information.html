@@ -2,7 +2,7 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block title %}
-    {{super()}} - Benvingut a la app
+    {{ super() }} - Benvingut a la app
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,10 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eligendi neque voluptates officia magnam, laborum soluta exercitationem, accusantium iure quidem nemo assumenda optio quae vero, perferendis praesentium iste rem deleniti.</p>
 
     {% if username %}
-        <h2>Benvingut, {{ username }}</h2>
+        <h2>Benvingut, {{ username }}
+            <!-- Botón de Cerrar sesión -->
+            <a href="{{ url_for('logout') }}" class="btn btn-danger ms-3">Tancar sessió</a>
+        </h2>
     {% endif %}
 
     <!-- Formulario de inicio de sesión -->

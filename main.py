@@ -74,6 +74,13 @@ def index():
 
     return render_template("information.html", **context)
 
+@app.route('/logout')
+def logout():
+    # Eliminar 'username' de la sesión para cerrar la sesión
+    session.pop('username', None)
+    flash("Has tancat sessió correctament.")
+    return redirect('/index')  # Redirige a la página de inicio o cualquier otra
+
 # Ruta para la página de Parkings
 @app.route('/parkings')
 def parkings():
