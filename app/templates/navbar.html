@@ -6,24 +6,36 @@
     </ul>
 </nav> -->
 
-<nav class=" navbar navbar-expand-md navbar-light bg-light d-flex justify-content-start" ">
-    <a class="ms-0 navbar-brand" href="#">
-      <!-- ICONA -->
-        <img src="{{ url_for('static', filename='images/parking1.png') }}" alt="imatge_parking" style="height: 50px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <!-- BOTO INICI -->
-          <a class="nav-link" href="{{ url_for('index') }}">Botó inici <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <!-- BOTO GOOGLE -->
-          <a class="nav-link" href="https://www.google.com" TARGET="_blank">Botó Google</a>
-        </li>
-      
-  </nav>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <!-- Logo -->
+  <a class="navbar-brand ms-0" href="#">
+    <img src="{{ url_for('static', filename='images/parking1.png') }}" alt="Logo Parking" style="height: 50px;">
+  </a>
+
+  <!-- Botón colapsable para dispositivos móviles -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menú -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-3">
+      <!-- Botó Inici -->
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ url_for('index') }}">Inici <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- Botó Parkings -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('parkings') }}">Parkings</a>
+      </li>
+    </ul>
+    <!-- Botón de perfil con icono de usuario -->
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('perfil_usuario') }}">
+          <i class="bi bi-person-circle"></i> Perfil
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

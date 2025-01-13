@@ -1,12 +1,10 @@
-from flask import Flask, request, make_response, redirect, render_template, session, flash
+from flask import Flask, request, make_response, redirect, render_template, session, flash, url_for
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import check_password_hash  # Afegim la funció per comprovar la contrasenya
 from app import create_app
 from app.forms import LoginForm
 
 app = create_app()
-
-items = ["Huawei", "xiaomi", "apple", "samsung"]
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/flask_app'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -62,12 +60,23 @@ def index():
     # Passar la informació al context per mostrar-la a la plantilla
     context = {
         'ip': user_ip,
-        'items': items,
         'login_form': login_form,
         'username': username
     }
 
     return render_template("information.html", **context)
+
+
+# Ruta per la pàgina de Parkings
+@app.route('/parkings')
+def parkings():
+    return render_template('parkings.html')
+
+
+# Ruta per la pàgina de Perfil d'usuari
+@app.route('/perfil')
+def perfil_usuario():
+    return render_template('perfil.html')
 
 
 if __name__ == "__main__":
