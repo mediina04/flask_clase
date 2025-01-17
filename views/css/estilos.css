@@ -1,0 +1,460 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 80px; /* Compensa el espacio que ocupa el header fijo */
+    margin: 0; /* Elimina el margen superior */
+    min-height: 100vh; /* Asegura que el body tenga la altura completa */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la página */
+    left: 0; /* Alinea el header con el borde izquierdo */
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el header esté encima del resto del contenido */
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo img {
+    height: 65px;
+}
+
+header .nav-icons {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    gap: 15px;
+}
+
+header .nav-icons a {
+    margin-left: 15px;
+}
+
+header .nav-icons img {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* PÁGINA DE LOGIN */
+.login-container {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden; /* Evita el choque con el header en la página de login */
+}
+
+/* Imagen de fondo */
+.login-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Caja de login */
+.login-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EAF3F6;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 80px; /* Añadido para evitar que se solape con el header */
+}
+
+/* Logo */
+.login-logo img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form label {
+    font-weight: bold;
+    color: #155C8F;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #D3E2F1;
+}
+
+.login-form input::placeholder {
+    color: #155C8F;
+}
+
+/* Botones */
+.login-buttons {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.login-buttons .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.login-buttons .btn-signup {
+    background-color: #84B4DC;
+    color: #1C1C1C;
+    font-weight: bold;
+}
+
+.login-buttons .btn-signup:hover {
+    background-color: #FFFFFF;
+    color: #1C1C1C;
+    border: 1px solid #1C1C1C;
+}
+
+.login-buttons .btn-login {
+    background-color: #155C8F;
+    font-weight: bold;
+}
+
+.login-buttons .btn-login:hover {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+}
+
+/* PÁGINA REGISTRO */
+.register-container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px); /* Descuenta la altura del header */
+    padding-top: 80px;
+    padding-bottom: 100px; /* Evita el choque con el header en la página de registro */
+}
+
+.register-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.register-box {
+    background-color: #EAF4FB;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.register-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: left;
+    text-align: left;
+}
+
+/* Estilos de input */
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D3E2F1;
+    font-size: 14px;
+    color: #155C8F;
+}
+
+.register-form label {
+    font-weight: bold;
+    color: #155C8F;
+    text-align: left;
+}
+
+/* Botón */
+.btn-signup {
+    background-color: #155C8F;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background-color: #1C1C1C;
+}
+
+/* Fila de dos columnas */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+/* PÁGINA INICIO */
+.hero {
+    position: relative;
+    text-align: center;
+    height: 50vh; /* Reduce la altura total de la sección hero */
+    overflow: hidden;
+    padding-top: 80px; /* Añadido para evitar que el contenido se solape con el header */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #EAF3F6;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 1.5rem;
+    color: #155C8F;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 0.9rem;
+    color: #1C1C1C;
+    margin-bottom: 15px;
+}
+
+.hero-buttons .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.hero-buttons .btn-signup {
+    background-color: #84B4DC;
+    color: #1C1C1C;
+    font-weight: bold;
+}
+
+.hero-buttons .btn-signup:hover {
+    background-color: #FFFFFF;
+    color: #1C1C1C;
+    border: 1px solid #1C1C1C;
+}
+
+.hero-buttons .btn-login {
+    background-color: #155C8F;
+    font-weight: bold;
+}
+
+.hero-buttons .btn-login:hover {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+}
+
+/* Info section */
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.info-card h2 {
+    font-size: 1.5rem;
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #155C8F;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Contenedor principal con las 4 columnas */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Alineación más controlada entre las columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 0 20px;
+    justify-items: start; /* Alinea los elementos de cada columna al principio */
+    align-items: start; /* Alinea los elementos verticalmente al inicio */
+}
+
+/* Estilos del logo */
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center;
+    max-width: 200px; /* Limita el ancho del logo */
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px; /* Limita el tamaño del logo */
+}
+
+/* Estilos del formulario de contacto */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el formulario a la izquierda */
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+}
+
+.footer-contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos del formulario a la izquierda */
+}
+
+.footer-contact form textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.footer-contact form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: #84B4DC;
+    color: #1C1C1C;
+    cursor: pointer;
+}
+
+/* Estilos de las columnas de enlaces */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los enlaces a la izquierda */
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Línea separadora */
+.footer-separator {
+    width: 80%; /* Ajusta este valor según lo que prefieras */
+    margin: 0 auto;
+    margin-top: 10px;
+    border-top: 1px solid #84B4DC;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+}
