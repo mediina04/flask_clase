@@ -17,6 +17,110 @@ html, body {
     background-color: #f8f9fa;
 }
 
+/* PÁGINA PARKING */
+.parking-slot {
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px; /* Tamaño del número */
+    font-weight: bold;
+    color: white;
+}
+
+.free { background-color: #4caf50; }
+.occupied { background-color: #e74c3c; }
+.reserved-user { background-color: #3578e5 !important; }
+
+/* Estilos para el layout del parking */
+.parking-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a4a4a;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    width: 120%;
+    overflow-x: auto;
+    margin-right: 40px; /* Aumenta el margen derecho para separarlo de la columna de la info/formulario */
+}
+
+.parking-row {
+    display: flex;
+    justify-content: flex-start; /* Alinea las plazas a la izquierda */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.parking-center {
+    width: 100%;
+    height: 120px; /* Aumenta la altura para dar más espacio */
+    background-color: #4a4a4a;
+}
+
+/* Estilos para la sección de información/formulario */
+.parking-info {
+    text-align: left;
+    margin-left: 120px; /* Mantén el margen izquierdo para la separación */
+    margin-top: 0; /* Elimina el margen superior si no lo necesitas */
+}
+
+.parking-info h5 {
+    font-size: 1.2rem;
+    color: #155c8f;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.free-text { color: #155c8f; }
+.occupied-text { color: #dc3545; }
+.reserved-text { color: #0d6efd; }
+
+.reserva-box {
+    background-color: #eaf3f6;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.reserva-form {
+    width: 100%;
+}
+
+.reserva-form .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.reserva-form label {
+    font-weight: bold;
+    color: #155c8f;
+    display: block;
+}
+
+.reserva-form input, .reserva-form select {
+    padding: 10px;
+    border: 1px solid #d3e2f1;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #155c8f;
+    width: 100%;
+}
+
+.reserva-form input::placeholder {
+    color: #155c8f;
+}
 
 /* HEADER */
 header {
@@ -47,14 +151,13 @@ header .nav-icons {
     display: flex;
     position: absolute;
     right: 20px;
-    gap: 30PX;
+    gap: 30px;
 }
 
 header .nav-icons img {
     height: 40px;
     cursor: pointer;
 }
-
 
 /* CONTENEDORES GENERALES */
 .container {
@@ -63,8 +166,19 @@ header .nav-icons img {
     padding: 20px;
 }
 
-/* LOGIN Y REGISTRO */
-.login-container, .register-container {
+/* Estructura de columnas para el Parking y la información/formulario */
+.row {
+    display: flex;
+    gap: 30px; /* Espacio entre columnas */
+    margin-top: 80px; /* Para evitar que el contenido quede debajo del header fijo */
+}
+
+.col-md-6 {
+    flex: 1;
+}
+
+/* LOGIN, REGISTRO Y RESERVA */
+.login-container, .register-container, .reserva-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +187,7 @@ header .nav-icons img {
     min-height: 100vh;
 }
 
-.login-box, .register-box {
+.login-box, .register-box, .reserva-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,29 +201,24 @@ header .nav-icons img {
     width: 100%;
 }
 
-.login-logo, .register-logo {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.login-form, .register-form {
+.login-form, .register-form, .reserva-form {
     width: 100%;
 }
 
-.login-form .form-group, .register-form .form-group {
+.login-form .form-group, .register-form .form-group, .reserva-form .form-group {
     margin-bottom: 15px;
     width: 100%;
 }
 
-.login-form label, .register-form label {
+.login-form label, .register-form label, .reserva-form label {
     font-weight: bold;
     color: #155c8f;
     text-align: left;
     display: block;
 }
 
-.login-form input, .register-form input {
+.login-form input, .register-form input, .reserva-form input,
+.reserva-form select {
     padding: 10px;
     border: 1px solid #d3e2f1;
     border-radius: 4px;
@@ -118,7 +227,8 @@ header .nav-icons img {
     width: 100%;
 }
 
-.login-form input::placeholder, .register-form input::placeholder {
+.login-form input::placeholder, .register-form input::placeholder, 
+.reserva-form input::placeholder {
     color: #155c8f;
 }
 
@@ -135,6 +245,7 @@ header .nav-icons img {
     color: #fff;
     border: 1px solid #1c1c1c;
 }
+
 
 .secondary-btn {
     background-color: #84b4dc;
