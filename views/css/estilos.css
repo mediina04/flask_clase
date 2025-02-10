@@ -41,7 +41,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #4a4a4a;
+    background-color: #a4a4a4;
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 40px;
@@ -60,7 +60,24 @@ html, body {
 .parking-center {
     width: 100%;
     height: 120px; /* Aumenta la altura para dar más espacio */
-    background-color: #4a4a4a;
+    background-color: #a4a4a4;
+}
+
+/* Estilos para la leyenda de colores */
+.legend {
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 1px solid #000;
 }
 
 /* Estilos para la sección de información/formulario */
